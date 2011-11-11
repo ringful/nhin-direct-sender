@@ -32,11 +32,11 @@ secure email messages from another provider. For a fully featured Direct email g
 
 3. Run the tester app:
 
-    java -jar sender-1.0.jar gmail "no-reply-test@ringful.com" password "no-reply-test@ringful.com" "yourname@direct.healthvault-stage.com" "test subject" "test message from Google apps"
+    java -jar sender-1.0.jar gmail "no-reply-test@ringfulhealth.com" password "no-reply-test@ringfulhealth.com" "yourname@direct.healthvault-stage.com" "test subject" "test message from Google apps"
 
 NOTE:
     
-You need password on the command line to send email through no-reply-test@ringful.com. We change this password often. Email the administrator of this project for the current one.
+You need password on the command line to send email through no-reply-test@ringfulhealth.com. We change this password often. Email the administrator of this project for the current one.
 
 You must have an account at http://direct.healthvault-stage.com/ in order to view the message.
 
