@@ -18,22 +18,21 @@ secure email messages from another provider. For a fully featured Direct email g
 
 ## Quick start
 
-* Add a few JARs to your local maven repo: (I could not find those two JARs in official Mavne repos. If you can please contact me)
+1. Add a few JARs to your local maven repo: (I could not find those two JARs in official Mavne repos. If you can please contact me)
 
-mvn install:install-file -DgroupId=javamail.crypto.bouncycastle -DartifactId=smime -Dversion=060622 -Dpackaging=jar -Dfile=bin/smime_060622.jar
+    mvn install:install-file -DgroupId=javamail.crypto.bouncycastle -DartifactId=smime -Dversion=060622 -Dpackaging=jar -Dfile=bin/smime_060622.jar
+    mvn install:install-file -DgroupId=javamail -DartifactId=crypto -Dversion=060622 -Dpackaging=jar -Dfile=bin/crypto_060622.jar
 
-mvn install:install-file -DgroupId=javamail -DartifactId=crypto -Dversion=060622 -Dpackaging=jar -Dfile=bin/crypto_060622.jar
+2. Build the binary: 
 
-* Build the binary: 
+    mvn clean
+    mvn package
+    cp target/sender-1.0.jar bin/
+    cd bin
 
-mvn clean
-mvn package
-cp target/sender-1.0.jar bin/
-cd bin
+3. Run the tester app:
 
-* Run the tester app:
-
-java -jar sender-1.0.jar gmail "no-reply-test@ringful.com" password "no-reply-test@ringful.com" "yourname@direct.healthvault-stage.com" "test subject" "test message from Google apps"
+    java -jar sender-1.0.jar gmail "no-reply-test@ringful.com" password "no-reply-test@ringful.com" "yourname@direct.healthvault-stage.com" "test subject" "test message from Google apps"
 
 NOTE:
     
