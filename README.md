@@ -1,4 +1,3 @@
-
 ## Background
 
 The NHIN Direct Project is a secure email specification (based on S/MIME) for
@@ -20,19 +19,25 @@ secure email messages from another provider. For a fully featured Direct email g
 
 1. Add a few JARs to your local maven repo: (I could not find those two JARs in official Mavne repos. If you can please contact me)
 
+<pre>
     mvn install:install-file -DgroupId=javamail.crypto.bouncycastle -DartifactId=smime -Dversion=060622 -Dpackaging=jar -Dfile=bin/smime_060622.jar
     mvn install:install-file -DgroupId=javamail -DartifactId=crypto -Dversion=060622 -Dpackaging=jar -Dfile=bin/crypto_060622.jar
+</pre>
 
 2. Build the binary: 
 
+<pre>
     mvn clean
     mvn package
     cp target/sender-1.0.jar bin/
     cd bin
+</pre>
 
 3. Run the tester app:
 
+<pre>
     java -jar sender-1.0.jar gmail "no-reply-test@ringfulhealth.com" password "no-reply-test@ringfulhealth.com" "yourname@direct.healthvault-stage.com" "test subject" "test message from Google apps"
+</pre>
 
 NOTE:
     
